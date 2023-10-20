@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mongodb-dev:
+    image: mongo:latest
+    container_name: nim-mongodb-dev
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-dev-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: "12345"
+    networks:
+      - nim-backend-network
+
+networks:
+  nim-backend-network:
+
+
+volumes:
+  mongodb-dev-data:
