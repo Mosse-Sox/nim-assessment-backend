@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   mongodb-dev:
@@ -13,7 +13,6 @@ services:
 
 networks:
   nim-backend-network:
-
 
 volumes:
   mongodb-dev-data:
