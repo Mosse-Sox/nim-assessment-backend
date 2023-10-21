@@ -8,9 +8,6 @@ services:
       - "27017:27017"
     volumes:
       - mongodb-dev-data:/data/db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: "12345"
     networks:
       - nim-backend-network
 
