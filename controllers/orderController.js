@@ -67,12 +67,22 @@ const getByStatus = async (req, res) => {
   }
 };
 
+const getTotalSales = async (req, res) => {
+  try {
+    const sales = await Order.getTotalSales();
+    res.send(sales);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
 module.exports = {
   getAll,
   getOne,
   create,
   update,
   remove,
+  getTotalSales,
   getByCustomer,
   getByStatus
 };
